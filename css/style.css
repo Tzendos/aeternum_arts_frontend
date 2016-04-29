@@ -18,18 +18,6 @@ a {
     color: #a98148;
 }
 
-a:hover {
-    color: #cd9d58;
-}
-
-a:active {
-    color: #e3921f;
-}
-
-a:visited {
-    color: #a98148;
-}
-
 .clearfix:after {
     display: block;
     content: "";
@@ -74,8 +62,8 @@ a:visited {
     display: table;
     margin-left: -420px;
     padding: 0;
-    min-width: 840px;
-    min-height: 72px;
+    width: 840px;
+    height: 72px;
     list-style: none;
     background-color: #a6967f;
     border: 1px solid #cbc3bc;
@@ -115,13 +103,158 @@ a:visited {
 }
 
 .best-section .section-title {
+    margin-bottom: 30px;
     margin-left: 50px;
     font-family: "Artist-Modern", serif;
     font-size: 36px;
 }
 
-/*проверка работы гита*/
-/*--------*/
+.best-section .content-block {
+    position: relative;
+    display: inline-block;
+    margin-right: 22.2px;
+    width: 220px;
+    height: 168px;
+    overflow: hidden;
+    vertical-align: top;
+    background-color: #a6967f;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 12px;
+}
+
+.best-section .content-block:last-child {
+    margin-right: 0;
+}
+
+.best-section .photo-block {
+    background-image: url("../img/header-banner.jpg");
+}
+
+.best-section .music-block {
+    background-image: url("../img/header-banner.jpg");
+}
+
+.best-section .story-block p {
+    color: #edece9;
+    margin: 5px 10px;
+}
+
+.best-section .story-block p a {
+    color: #edece9;
+    text-decoration: underline;
+}
+
+.best-section .description-bg {
+    position: absolute; top: 22px;
+    width: inherit;
+    height: inherit;
+    background-color: #edece9;
+}
+
+.description-bg div {
+    text-align: center;
+}
+
+.description-bg .content-block-title {
+    margin: 8px 0;
+}
+
+.description-bg .open-arrow-pic {
+    width: inherit;
+    height: 10px;
+    background: #e3921f; /*временно*/
+}
+
+.description-bg .attentica-content-title {
+    margin-top: 10px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description-bg .author {
+    margin-top: 20px;
+}
+
+.description-bg .username-title {
+    font-weight: bold;
+}
+
+.description-bg .username-title:hover {
+    text-decoration: underline;
+}
+
+.description-bg .likes {
+    float: left;
+    padding: 10px;
+
+}
+
+.description-bg .likes .like-pic {
+    float: left;
+    width: 22px;
+    height: 22px;
+    background-color: #fca9e4; /*временно*/
+    /*background: url("") no-repeat center center;*/
+}
+
+.description-bg .likes .like-counter {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.description-bg .more-info {
+    float: right;
+    padding: 10px;
+}
+
+.description-bg .more-info .more-pic {
+    float: right;
+    width: 22px;
+    height: 22px;
+    /*background: url("") no-repeat center center;*/
+    background-color: #a98148; /*временно*/
+    border-radius: 50%; /*временно*/
+}
+
+.description-bg .more-info .more-link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.description-bg .music-author-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
