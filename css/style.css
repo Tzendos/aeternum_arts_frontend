@@ -18,6 +18,10 @@ a {
     color: #a98148;
 }
 
+.condition-checkbox {
+    display: none;
+}
+
 .clearfix:after {
     display: block;
     content: "";
@@ -79,7 +83,7 @@ a {
 }
 
 .nav li:last-child {
-    background: url("../img/settings.png") no-repeat center center;
+    background: url("../img/site-elements/settings.png") no-repeat center center;
     min-width: 72px;
     border-right: none;
     cursor: pointer;
@@ -147,10 +151,11 @@ a {
 }
 
 .best-section .description-bg {
-    position: absolute; top: 22px;
-    width: inherit;
-    height: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: #edece9;
+    cursor: pointer;
 }
 
 .description-bg div {
@@ -158,13 +163,45 @@ a {
 }
 
 .description-bg .content-block-title {
-    margin: 8px 0;
+    margin-top: 8px;
+    height: 20px;
 }
 
 .description-bg .open-arrow-pic {
-    width: inherit;
-    height: 10px;
-    background: #e3921f; /*временно*/
+    width: 100%;
+    height: 7px;
+    background: url("../img/site-elements/open-arrow-pic.png") no-repeat center center;
+    background-size: contain;
+}
+
+/*condition of .description-bg vision*/
+.content-block .condition-checkbox:not(:checked) + .description-bg {
+    top: 138px;
+}
+
+.content-block .condition-checkbox:checked + .description-bg {
+    top: 22px;
+}
+
+.content-block .condition-checkbox:not(:checked) + .description-bg:hover {
+    top: 128px;
+}
+
+.content-block .condition-checkbox:not(:checked) + .description-bg .open-arrow-pic {
+    display: none;
+}
+
+.content-block .condition-checkbox:not(:checked) + .description-bg:hover .open-arrow-pic {
+    display: block;
+}
+
+.content-block .condition-checkbox:checked + .description-bg .open-arrow-pic {
+    display: block;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .description-bg .attentica-content-title {
@@ -190,15 +227,22 @@ a {
 .description-bg .likes {
     float: left;
     padding: 10px;
-
 }
 
 .description-bg .likes .like-pic {
     float: left;
     width: 22px;
     height: 22px;
-    background-color: #fca9e4; /*временно*/
-    /*background: url("") no-repeat center center;*/
+    background: url("../img/site-elements/like-pic.png") no-repeat center center;
+    background-size: 95%;
+}
+
+.description-bg .likes .like-pic:hover {
+    background-size: 100%;
+}
+
+.description-bg .likes .like-pic:active {
+    background: url("../img/site-elements/like-pic_active.png") no-repeat center center;
 }
 
 .description-bg .likes .like-counter {
@@ -215,20 +259,30 @@ a {
     padding: 10px;
 }
 
+.description-bg .more-info:hover {
+    color: #e3921f;
+}
+
+.description-bg .more-info:hover .more-pic {
+    background-size: 100%;
+}
+
 .description-bg .more-info .more-pic {
     float: right;
     width: 22px;
     height: 22px;
-    /*background: url("") no-repeat center center;*/
-    background-color: #a98148; /*временно*/
-    border-radius: 50%; /*временно*/
+    background: url("../img/site-elements/more-pic.png") no-repeat center center;
+    background-size: 95%;
 }
 
 .description-bg .more-info .more-link {
-    display: inline-block;
     vertical-align: middle;
     font-size: 10px;
     margin-right: 5px;
+}
+
+.description-bg .more-info:active .more-pic {
+    background: url("../img/site-elements/more-pic_active.png") no-repeat center center;
 }
 
 .description-bg .music-author-title {
@@ -236,6 +290,7 @@ a {
     width: 100%;
     text-align: center;
 }
+
 
 
 
