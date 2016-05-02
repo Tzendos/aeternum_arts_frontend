@@ -120,12 +120,12 @@
 
 .recently-section .center-wrapper {
     position: relative;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 700px;
 }
 
 .recently-section .semicircle-shape {
-    top: 110px;
+    top: 120px;
     margin-left: 25px;
 }
 
