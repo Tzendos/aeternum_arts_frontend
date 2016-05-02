@@ -1,41 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #d7d1c5;
-    font-family: "Century Gothic", sans-serif;
-    color: #a98148;
-}
-
-/*set default 0px margins for some tags*/
-h1, h2, h3, h4, h5, h6, p, ul  {
-    margin: 0;
-    font-weight: normal;
-}
-
-/*set default link's style*/
-a {
-    text-decoration: none;
-    color: #a98148;
-}
-
-.condition-checkbox {
-    display: none;
-}
-
-.clearfix:after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
-.container {
-    position: relative;
-    margin: 0 auto;
-    width: 960px;
-    background-color: #edece9;
-}
-
-/*--begin--*/
+/*--all pages--*/
 .header {
     position: relative;
     width: 960px;
@@ -60,301 +23,197 @@ a {
     color: #fff;
 }
 
-/*navigation*/
 .nav {
     position: absolute; bottom: -36px; left: 50%;
-    display: table;
     margin-left: -420px;
-    padding: 0;
     width: 840px;
     height: 72px;
-    list-style: none;
-    background-color: #a6967f;
-    border: 1px solid #cbc3bc;
 }
 
-.nav li {
+.footer {
+    display: table;
+    width: 960px;
+    margin: 0 auto;
+    padding: 25px 0;
+    color: #edece9;
+    font-size: 18px;
+}
+
+.footer-logo {
     display: table-cell;
-    min-width: 100px;
-    padding: 0 10px;
-    border-right: 1px solid #cbc3bc;
+    width: 160px;
+    height: 46px;
+    background: url("../img/site-elements/footer-logo.png") no-repeat right center;
+    background-size: contain;
+}
+
+.copyright {
+    display: table-cell;
+    padding: 10px;
     vertical-align: middle;
-    text-align: center;
 }
 
-.nav li:last-child {
-    background: url("../img/site-elements/settings.png") no-repeat center center;
-    min-width: 72px;
-    border-right: none;
-    cursor: pointer;
-}
-
-.nav .active, .nav li:hover {
-    border-bottom: 6px solid #fff;
-}
-
-.nav a {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
+/*--index.html--*/
 /*best-section*/
 .best-section {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 35px;
     background-color: #ddd;
 }
 
-.best-section .section-title {
-    margin-bottom: 30px;
-    margin-left: 50px;
-    font-family: "Artist-Modern", serif;
-    font-size: 36px;
-}
-
-.best-section .content-block {
-    position: relative;
+.best-section .content-spoiler-block {
     display: inline-block;
     margin-right: 22.2px;
     width: 220px;
     height: 168px;
-    overflow: hidden;
     vertical-align: top;
-    background-color: #a6967f;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    font-size: 12px;
 }
 
-.best-section .content-block:last-child {
+.best-section .content-spoiler-block:last-child {
     margin-right: 0;
 }
 
-.best-section .photo-block {
+.best-section .photo-spoiler-block {
     background-image: url("../img/index/photo-miniatures/photo-example1.jpg");
 }
 
-.best-section .music-block {
+.best-section .music-spoiler-block {
     background-image: url("../img/index/album-miniatures/ImagineDragonsNightVisions.jpg");
 }
 
-.best-section .story-block p {
+.best-section .story-spoiler-block p {
     color: #edece9;
     margin: 5px 10px;
 }
 
-.best-section .story-block p a {
+.best-section .story-spoiler-block p a {
     color: #edece9;
     text-decoration: underline;
 }
 
-.best-section .description-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #edece9;
-    cursor: pointer;
-}
-
-.description-bg div {
-    text-align: center;
-}
-
-.description-bg .content-block-title {
-    margin-top: 8px;
-    height: 20px;
-}
-
-.description-bg .open-arrow-pic {
-    width: 100%;
-    height: 7px;
-    background: url("../img/site-elements/open-arrow-pic.png") no-repeat center center;
-    background-size: contain;
-}
-
-/*condition of .description-bg vision*/
-.content-block .condition-checkbox:not(:checked) + .description-bg {
-    top: 138px;
-}
-
-.content-block .condition-checkbox:checked + .description-bg {
-    top: 22px;
-}
-
-.content-block .condition-checkbox:not(:checked) + .description-bg:hover {
-    top: 128px;
-}
-
-.content-block .condition-checkbox:not(:checked) + .description-bg .open-arrow-pic {
-    display: none;
-}
-
-.content-block .condition-checkbox:not(:checked) + .description-bg:hover .open-arrow-pic {
-    display: block;
-}
-
-.content-block .condition-checkbox:checked + .description-bg .open-arrow-pic {
-    display: block;
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-/*end: condition of .description-bg visibility*/
-
-.description-bg .attentica-content-title {
-    margin-top: 10px;
-    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.description-bg .author {
-    margin-top: 20px;
-}
-
-.description-bg .username-title {
-    font-weight: bold;
-}
-
-.description-bg .username-title:hover {
-    text-decoration: underline;
-}
-
-.description-bg .likes {
-    float: left;
-    padding: 10px;
-}
-
-.description-bg .likes .like-pic {
-    float: left;
-    width: 22px;
-    height: 22px;
-    background: url("../img/site-elements/like-pic.png") no-repeat center center;
-    background-size: 95%;
-}
-
-.description-bg .likes .like-pic:hover {
-    background-size: 100%;
-}
-
-.description-bg .likes .like-pic:active {
-    background: url("../img/site-elements/like-pic_active.png") no-repeat center center;
-}
-
-.description-bg .likes .like-counter {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
-    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.description-bg .more-info {
-    float: right;
-    padding: 10px;
-}
-
-.description-bg .more-info:hover {
-    color: #e3921f;
-}
-
-.description-bg .more-info:hover .more-pic {
-    background-size: 100%;
-}
-
-.description-bg .more-info .more-pic {
-    float: right;
-    width: 22px;
-    height: 22px;
-    background: url("../img/site-elements/more-pic.png") no-repeat center center;
-    background-size: 95%;
-}
-
-.description-bg .more-info .more-link {
-    vertical-align: middle;
-    font-size: 10px;
-    margin-right: 5px;
-}
-
-.description-bg .more-info:active .more-pic {
-    background: url("../img/site-elements/more-pic_active.png") no-repeat center center;
-}
-
-.description-bg .music-author-title {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-}
-
+/*big-photo-section*/
 .big-photo-section {
     position: relative;
-    padding: 40px 0;
+    padding-bottom: 40px;
 }
 
 .big-photo-section .fotorama {
     margin: 0 130px;
 }
 
-/*semicircle-shape*/
-.semicircle-shape {
-    position: absolute;
-    width: 160px;
-    height: 110px;
-    overflow: hidden;
-}
-
-.semicircle-shape .square {
-    position: relative;
-    float: left;
-    width: 105px;
-    height: inherit;
-    background-color: #edece9;
-    overflow: visible;
-    white-space: nowrap;
-    z-index: 10;
-}
-
-.semicircle-shape .circle {
-    position: absolute; left: 50px; top: 1px;
-    float: left;
-    width: 94px;
-    height: 94px;
-    background-color: #edece9;
-    border-radius: 50%;
-    border: 7px solid #a6967f;
-    z-index: 5;
-}
-
-.semicircle-shape .author-title {
-    margin-top: 20px;
-    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
-    font-size: 36px;
-
-}
-
-.semicircle-shape .section-title, .semicircle-shape .subsection-title {
-    font-size: 15px;
-    line-height: 15px;
-}
-/*end: semicircle-shape*/
-
 .big-photo-section .semicircle-shape {
-    top: 90px;
+    top: 140px;
     margin-left: 25px;
 }
 
+.big-photo-section .semicircle-shape .circle,
+.big-photo-section .semicircle-shape .square {
+    background-color: #edece9;
+}
+
+/*recently-section*/
 .recently-section {
     position: relative;
+    padding-bottom: 40px;
     background-color: #ddd;
 }
 
+.recently-section .center-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 700px;
+}
 
+.recently-section .semicircle-shape {
+    top: 110px;
+    margin-left: 25px;
+}
+
+.recently-section .semicircle-shape .circle,
+.recently-section .semicircle-shape .square {
+    background-color: #ddd;
+}
+
+.recently-section .big-shape,
+.recently-section .small-shape {
+    background-color: #a6967f;
+}
+
+.recently-section .big-shape {
+    display: inline-block;
+    float: left;
+    width: 220px;
+    height: 352px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    overflow: visible;
+}
+
+.recently-section .small-shape {
+    float: right;
+    width: 220px;
+    height: 168px;
+    margin-bottom: 16px;
+    overflow: visible;
+}
+
+.recently-section .small-shape:last-child {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.recently-section .music-player-block {
+    position: relative; top: -8px;
+    width: 200px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.recently-section .big-shape:nth-child(1) .album-pic {
+    background-image: url("../img/index/album-miniatures/ImagineDragonsNightVisions.jpg");
+}
+
+.recently-section .big-shape:nth-child(2) .album-pic {
+    background-image: url("../img/index/album-miniatures/LinkinParkPapercut.jpg");
+}
+
+.recently-section .content-spoiler-block {
+    position: relative; top: -8px; right: -10px;
+    width: inherit;
+    height: inherit;
+}
+
+.recently-section .photo-spoiler-block {
+    background-image: url("../img/index/photo-miniatures/photo-example2.jpg");
+}
+
+/*connectors*/
+.recently-section .big-shape:after {
+    content: "";
+    display: block;
+    position: absolute; left: 220px; bottom: 0; z-index: 0;
+    width: 20px;
+    height: 30px;
+    background-color: #a6967f;
+}
+
+.recently-section .big-shape:before {
+    content: "";
+    display: block;
+    position: absolute; left: 460px; top: 0; z-index: 0;
+    width: 20px;
+    height: 30px;
+    background-color: #a6967f;
+}
+
+.recently-section .small-shape:after {
+    content: "";
+    display: block;
+    position: absolute; right: 0; top: 168px; z-index: 0;
+    width: 30px;
+    height: 8px;
+    background-color: #a6967f;
+}
 
 
 

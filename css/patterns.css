@@ -1,0 +1,401 @@
+/*--default--*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d7d1c5;
+    font-family: "Century Gothic", sans-serif;
+    color: #a98148;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul  {
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #a98148;
+}
+
+/*--standard tools--*/
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    background-color: #edece9;
+}
+
+.condition-checkbox {
+    display: none;
+}
+
+/*--navigation--*/
+.nav {
+    display: table;
+    padding: 0;
+    list-style: none;
+    background-color: #a6967f;
+    border: 1px solid #cbc3bc;
+}
+
+.nav li {
+    display: table-cell;
+    min-width: 100px;
+    padding: 0 10px;
+    border-right: 1px solid #cbc3bc;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav li:last-child {
+    background: url("../img/site-elements/settings.png") no-repeat center center;
+    min-width: 72px;
+    border-right: none;
+    cursor: pointer;
+}
+
+.nav .active, .nav li:hover {
+    border-bottom: 6px solid #fff;
+}
+
+.nav a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/*--section-title--*/
+.section-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    font-family: "Artist-Modern", serif;
+    font-size: 36px;
+}
+
+/*--semicircle-shape--*/
+.semicircle-shape {
+    position: absolute;
+    width: 160px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.semicircle-shape .square {
+    position: relative;
+    float: left;
+    width: 105px;
+    height: inherit;
+    overflow: visible;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.semicircle-shape .circle {
+    position: absolute; left: 50px; top: 1px;
+    float: left;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    border: 7px solid #a6967f;
+    z-index: 5;
+}
+
+.semicircle-shape .author-name {
+    margin-top: 20px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 36px;
+}
+
+.semicircle-shape .section-name, .semicircle-shape .subsection-name {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+/*--content-spoiler-block--*/
+.content-spoiler-block {
+    background-color: #a6967f;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    font-size: 12px;
+}
+
+.content-spoiler-block .description-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #edece9;
+    cursor: pointer;
+}
+
+.content-spoiler-block .description-bg div {
+    text-align: center;
+}
+
+.content-spoiler-block .content-spoiler-block-title {
+    margin-top: 8px;
+    height: 20px;
+}
+
+.content-spoiler-block .open-arrow-pic {
+    width: 100%;
+    height: 7px;
+    background: url("../img/site-elements/open-arrow-pic.png") no-repeat center center;
+    background-size: contain;
+}
+
+/*condition of .description-bg vision*/
+.content-spoiler-block .condition-checkbox:not(:checked) + .description-bg {
+    top: 138px;
+}
+
+.content-spoiler-block .condition-checkbox:checked + .description-bg {
+    top: 22px;
+}
+
+.content-spoiler-block .condition-checkbox:not(:checked) + .description-bg:hover {
+    top: 128px;
+}
+
+.content-spoiler-block .condition-checkbox:not(:checked) + .description-bg .open-arrow-pic {
+    display: none;
+}
+
+.content-spoiler-block .condition-checkbox:not(:checked) + .description-bg:hover .open-arrow-pic {
+    display: block;
+}
+
+.content-spoiler-block .condition-checkbox:checked + .description-bg .open-arrow-pic {
+    display: block;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+/*end: condition of .description-bg visibility*/
+
+.content-spoiler-block .attentica-content-title {
+    margin-top: 10px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content-spoiler-block .author {
+    margin-top: 20px;
+}
+
+.content-spoiler-block .username-title {
+    font-weight: bold;
+}
+
+.content-spoiler-block .username-title:hover {
+    text-decoration: underline;
+}
+
+.content-spoiler-block .likes {
+    float: left;
+    padding: 10px;
+}
+
+.content-spoiler-block .likes .like-pic {
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url("../img/site-elements/like-pic.png") no-repeat center center;
+    background-size: 95%;
+}
+
+.content-spoiler-block .likes .like-pic:hover {
+    background-size: 100%;
+}
+
+.content-spoiler-block .likes .like-pic:active {
+    background: url("../img/site-elements/like-pic_active.png") no-repeat center center;
+}
+
+.content-spoiler-block .likes .like-counter {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content-spoiler-block .more-info {
+    float: right;
+    padding: 10px;
+}
+
+.content-spoiler-block .more-info:hover {
+    color: #e3921f;
+}
+
+.content-spoiler-block .more-info:hover .more-pic {
+    background-size: 100%;
+}
+
+.content-spoiler-block .more-info .more-pic {
+    float: right;
+    width: 22px;
+    height: 22px;
+    background: url("../img/site-elements/more-pic.png") no-repeat center center;
+    background-size: 95%;
+}
+
+.content-spoiler-block .more-info .more-link {
+    vertical-align: middle;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.content-spoiler-block .more-info:active .more-pic {
+    background: url("../img/site-elements/more-pic_active.png") no-repeat center center;
+}
+
+.content-spoiler-block .music-author-title {
+    position: absolute;
+    width: 100%;
+}
+
+/*--music-player-block*/
+.music-player-block {
+    position: relative;
+    background-color: #edece9;
+    font-size: 12px;
+}
+
+.music-player-block .album-pic {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #a6967f;
+}
+
+.music-player-block .player-wrapper {
+    width: 90%;
+    margin: 25px auto;
+}
+
+.music-player-block .play-btn {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    background: url("../img/site-elements/brown-play-btn.png") no-repeat center center;
+    background-size: 95%;
+    text-align: center;
+}
+
+.music-player-block .play-btn:hover {
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.music-player-block .attentica-content-title {
+    padding-top: 5px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.music-player-block .music-author-title {
+    line-height: 12px;
+}
+
+.music-player-block .author {
+    text-align: center;
+}
+
+.music-player-block .username-title {
+    font-weight: bold;
+}
+
+.music-player-block .username-title:hover {
+    text-decoration: underline;
+}
+
+.music-player-block .likes {
+    float: left;
+    padding: 10px;
+}
+
+.music-player-block .likes .like-pic {
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url("../img/site-elements/like-pic.png") no-repeat center center;
+    background-size: 95%;
+}
+
+.music-player-block .likes .like-pic:hover {
+    background-size: 100%;
+}
+
+.music-player-block .likes .like-pic:active {
+    background: url("../img/site-elements/like-pic_active.png") no-repeat center center;
+}
+
+.music-player-block .likes .like-counter {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-family: "Attentica-4F", "Attentica4F-UltraLight", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.music-player-block .more-info {
+    float: right;
+    padding: 10px;
+}
+
+.music-player-block .more-info:hover {
+    color: #e3921f;
+}
+
+.music-player-block .more-info:hover .more-pic {
+    background-size: 100%;
+}
+
+.music-player-block .more-info .more-pic {
+    float: right;
+    width: 22px;
+    height: 22px;
+    background: url("../img/site-elements/more-pic.png") no-repeat center center;
+    background-size: 95%;
+}
+
+.music-player-block .more-info .more-link {
+    vertical-align: middle;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.music-player-block .more-info:active .more-pic {
+    background: url("../img/site-elements/more-pic_active.png") no-repeat center center;
+}
+
+
+
+
+
+
+
+
+
